@@ -8,7 +8,7 @@ const Blog = () => {
   const { id } = useParams();
   const { loading, blog } = useBlog({ id: id || "" });
   console.log(blog);
-  if (loading) {
+  if (loading || !blog) {
     return (
       <div className="">
         <Appbar />
